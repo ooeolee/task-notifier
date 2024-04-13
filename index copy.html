@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Push Notification Example</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="menu">
+    <button id="clockBtn" class="menuBtn">시계</button>
+    <button id="alarmsBtn" class="menuBtn">알람 설정</button>
+  </div>
+  <div id="wrapper">
+      <div id="clock">
+        <div id="time">
+          <span id="hours"></span>
+          <span id="minutes"></span>
+          <span id="seconds"></span>
+        </div>
+      </div>
+      
+      <div id="customNoti">
+        <form>
+          <input id="timeInput" type="text" placeholder="지정 시간을 입력해주세요(4개의 숫자 입력)">
+          <input id="titleInput"" type="text" placeholder="내용을 입력해주세요">
+          <button action="submit">생성</button>
+        </form>
+        <ul id="madedAlarms">
+        </ul>
+      </div>
+    </div>  
+  </div>
+  <script src="/screen.js"></script>
+  <script src="/renderer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Push Notification Example</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="menu">
+    <button id="menuChangeBtn" class="menuBtn">C</button>
+    <button id="clockChangeBtn"></button>
+    <div id="menu-deco1"></div>
+    <div id="menu-deco2"></div>
+  </div>
+  <div id="wrapper">
+      <div id="clock">
+        <div id="time">
+          <span id="seconds"></span>
+          <span id="hours"></span>
+          <span id="minutes"></span>
+        </div>
+        <div class="wrapper">
+          <canvas id="canvas" width="185" height="185"></canvas>
+          <div id="finsWrapper">
+            <div id="fins">
+              <div id="timefin1">0</div>
+              <div id="timefin2">0</div>
+              <div id="timefin3">0</div>
+              <div id="timefin4">0</div>
+            </div>
+          </div>
+          <div class="controls" id="startBtn">
+            <input type="text" id="setTimeInput">
+            <button id="resetBtn"></button>
+          </div>
+        </div> <!--wrapper end-->
+      </div>
+      <!--
+      
+      -->
+      <div id="customNoti">  
+        <form id="makeCustom">
+            <div id="inputes">
+              <select name="ap" id="ap-select"></select>
+              <select name="time" id="time-select"></select>
+              <input id="apInput" type="text" placeholder="am">
+              <input id="timeInput" type="text" placeholder="time">
+              <input id="titleInput"" type="text" placeholder="title">
+              <button id = "submitBtn"action="submit">+</button>
+            </div>
+            <table id="ap-table">
+              <tr>
+                <td>am</td>
+              </tr>
+              <tr>
+                <td>pm</td>
+              </tr>
+            </table>
+            <table id="time-table">
+              <tr>
+                <td>12</td>
+                <td>12:30</td>
+                <td>1</td>
+                <td>1:30</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2:30</td>
+                <td>3</td>
+                <td>3:30</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>4:30</td>
+                <td>5</td>
+                <td>5:30</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>6:30</td>
+                <td>7</td>
+                <td>7:30</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>8:30</td>
+                <td>9</td>
+                <td>9:30</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>10:30</td>
+                <td>11</td>
+                <td>11:30</td>
+              </tr>
+            </table>
+
+        </form>
+        <div class="listWrapper">
+          <ul id="madedAlarms">
+          </ul>
+          <div id="pagination"></div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+
+  <script src="screen.js"></script>
+  <script src="notify.js"></script>
+  <script src="pomodoro.js"></script>
+  <script src="clock.js"></script>
+
+</body>
+</html>

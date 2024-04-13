@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Nanum+Brush+Script&display=swap');
+@font-face {
+  font-family: 'Ownglyph_meetme-Rg';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'intelone-mono-font-family-italic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: overlay;
+  justify-content: center;
+
+}
+#menu {
+  width: 250px;
+  height: 50px;
+  z-index: 100;
+  margin: 0;
+  padding-top: 5%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: start;
+  position: relative;
+}
+.menuBtn {
+  background-color: #b1b1b1;
+  border-style: none;
+  font-size: 10px;
+  width: 20px;
+  height: 30px;
+  font-weight: 600;
+}
+#menu-deco1 {
+  width: 4px;
+  height: 30px;
+
+  background-color: #b1b1b1;
+  position: absolute;
+  left: 22px;
+  top: 13px;
+}
+#menu-deco2 {
+  width: 2px;
+  height: 30px;
+  background-color: #b1b1b1;
+  position: absolute;
+  left: 28px;
+  top: 13px;
+}
+#clockBtn{
+  width: 20%;
+  
+}
+#alarmsBtn {
+width: 30%;
+background-color: #d89065;
+
+}
+#wrapper {
+  height: 200px;
+  width: 250px;
+  background-color: rgb(114, 169, 197);
+  position: relative;
+
+}
+#clock {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: black;
+  position: relative;
+}
+#clockChangeBtn {
+  z-index: 100;
+  position: absolute;
+  border-style: none;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+}
+#time {
+  width: 120px;
+  height: 110px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  position: relative;
+}
+
+#hours {
+  font-size: 50px;
+  color: rgb(243, 244, 244);
+  text-align: start;
+  z-index: 3;
+  position: absolute;
+  bottom: -30px;
+  left: 130px;
+}
+#minutes {
+  font-size: 50px;
+  color: rgb(180, 180, 180);
+  z-index: 3;
+  position: absolute;
+  bottom: -80px;
+  left: 130px;
+
+}
+#time > #seconds{
+  font-size: 180px;
+  color: rgba(138, 138, 138, 0.243);
+  font-weight: 900;
+  position: absolute;
+  top: -25px;
+  left: 5px;
+}
+
+#setTimerForm {
+  width: 50px;
+  height: 50px;
+  background-color: #464646;
+}
+#setTimeInput {
+  width: 60px;
+  height: 30px;
+}
+#setTimeBtn {
+  width: 60px;
+  height: 30px;
+
+}
+#timerBox {
+  background-color: rgba(163, 163, 163, 0.03);
+  position: relative;
+  font-size: 20px;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#timer {
+  position: absolute;
+  bottom: 5px;
+  left: 55px;
+  width: 140px;
+  height: 140px;
+  border-radius: 200px;
+  background-color: rgb(205, 209, 211);
+
+}
+
+#line {
+  background-color: blue;
+  border: 1px solid red;
+  width: 70px;
+  height: 70px;
+}
+#customNoti {
+  width: 100%;
+  height: 200px;
+  background-color: #c4c4c4;
+  display: none;
+  justify-content: center;
+  align-items: center
+  
+}
+
+#makeCustom{
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  align-items: end;
+  justify-content: end;
+  justify-items: end;
+  padding-top:8px;
+  background-color: transparent;
+  position: relative;
+}
+
+#inputes {
+  background-color: transparent;
+  width: 250;
+  height: 33px;
+  display: grid;
+  position: relative;
+  grid-template-columns: 40px 40px 137px 33px;
+  border-top: 1px dotted #3e3e3e ;
+  border-bottom: 1px dotted #3e3e3e ;
+    
+}
+#inputes > * {
+  color: black;
+  background-color: transparent;
+  height: 30px;
+  border-top: none;
+  border-bottom: none;
+  font-size: 9px;
+}
+#apInput{
+  
+  border-left:none;
+  border-right: none;
+  text-align: left;
+
+}
+#timeInput{
+  border-left:none ;
+  border-right:1px dotted #3e3e3e;
+}
+#titleInput{
+  border-left: none;
+  border-right: 1px dotted #3e3e3e;
+}
+#submitBtn {
+  border-left:none;
+  border-right: none;
+}
+
+
+
+#ap-select {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: rgb(34, 34, 34);
+  z-index: 100;
+  top: 11px;
+  left: 30px;
+  border: none;
+  appearance: none;
+}
+#time-select {
+  width: 7px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: rgb(34, 34, 34);
+  position: absolute;
+  z-index: 100;
+  top: 11px;
+  left: 69px;
+  appearance: none;
+  border: none;
+  
+}
+#time-table {
+  z-index: 100;
+  font-size: 8px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 2px;
+  position: absolute;
+  display: none;
+  width: 120px;
+  height: auto;
+  left: 32px;
+  text-align: center;
+}
+#ap-table {
+  z-index: 100;
+  font-size: 8px;
+  position: absolute;
+  left: 0px;
+  width: 30px;
+  background-color: rgba(221, 221, 221, 0);
+  display: none;
+  border-radius: 2px;
+  text-align: center;
+}
+
+td {
+  width: 30px;
+  height: 20px;
+  background-color: #d7d7d7;
+}
+
+.listWrapper {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin-top: 15px;
+  position: absolute;
+  top: 11px;
+  
+}
+#madedAlarms {
+  width:100% ;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: 3px;
+  padding: 0 35px;
+  -ms-overflow-style: overlay;
+  margin-right: 15px;
+}
+#madedAlarms::-webkit-scrollbar {
+  display: none;
+}
+#madedAlarms > li {
+  background-color: #c4c4c4;
+  width: 250px;
+  height: 24px;
+  color: black;
+  font-size: 10px;
+  display: grid;
+  grid-template-columns: 50px 164px 36px;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  font-family: 'DungGeunMo';
+  font-weight: 500;
+  gap: 3px;
+  border-bottom: 1px dotted #3e3e3e;
+  
+}
+#madedAlarms > li  > span:first-child {
+  width:33px;
+  height: 100%;
+  padding-left: 8px;
+  text-align: start;
+  text-transform: lowercase;
+  line-height: 20px;
+  
+}
+#madedAlarms  > li  > span:nth-child(2) {
+  font-family: 'DungGeunMo';
+  width: auto;
+  height: 24px;
+  font-size: 12px;
+  border-right: 1px dotted #3e3e3e;
+  border-left: 1px dotted #3e3e3e;
+
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 7px;
+  line-height: 12px;
+}
+
+#madedAlarms >li > button {
+  font-family: 'DungGeunMo';
+  width: 13px;
+  height: 13px;
+  background-color: transparent;
+  border-radius: 2px;
+  font-size: 9px;
+  border-style:none;
+  line-height: 12px;
+  padding-left: 11px;
+}
+
+/*pomodoro*/
+
+.wrapper {
+  position: absolute;
+  left : 12%;
+  display: none;
+  width: 185px;
+  height: 185px;
+}
+canvas {
+  z-index: 1;
+}
+.pomodoro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.controls {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 38%;
+  left: 68px;
+  background-color: #464646; 
+}
+.controls input {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight:300;
+  color: white;
+  width: 30px;
+  height: 25px;
+  border-style: none;
+  font-size: 15px;
+  background-color: transparent;
+  text-align: center;
+}
+
+#resetBtn {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(197, 197, 197);
+  border-radius: 20px;
+  border: none;
+  position: absolute;
+  bottom: -127%;
+  right:-160%;
+  z-index: 1;
+}
+
+#finsWrapper {
+
+  width: 185px;
+  height: 185px;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  border-radius: 100px;
+}
+
+#fins {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#fins > * {
+  width: 12px;
+  height: 8px;
+  text-align: center;
+  font-size: 9px;
+  position: absolute;
+  color: white;
+}
+#timefin1 {
+  position: absolute;
+  top: 3%;
+  left: 47%;
+}
+#timefin2 {
+  position: absolute;
+  top: 50%;
+  left: 92%;
+}
+
+#timefin3 {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+}
+#timefin4{
+  position: absolute;
+  bottom: 3%;
+  left: 48%;
+}
+
